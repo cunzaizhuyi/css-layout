@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        .parent{
+            display: flex;
+            /* 不要忘记 */
+            width: 100%;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+
+        }
+        .right{
+            background-color: dodgerblue;
+            height: 200px;
+            /* 勿忘 */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+<!-- 需要 父元素 -->
+<div class="parent">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

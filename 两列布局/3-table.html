@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table  table-cell</title>
+<!-- 本方案是利用table布局的特点，单元格默认是自适应宽度。如果其中某个定宽，其他单元格会扩充剩余宽度   -->
+    <style>
+        .parent{
+            display: table;
+            /* 百度一下它的作用，加不加都形*/
+            table-layout: fixed;
+            /* 不要忘记 */
+            width: 100%;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+
+            display: table-cell;
+        }
+        .right{
+            background-color: dodgerblue;
+            height: 200px;
+
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+<!-- 需要 父元素 -->
+<div class="parent">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>
