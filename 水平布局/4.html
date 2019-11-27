@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+
+    <style>
+        .parent{
+            width:100%;
+            height: 200px;
+            background-color: #ccc;
+
+            position: relative;
+        }
+        .son{
+            width:200px;
+            height: 200px;
+            background-color: #eee;
+
+            position: absolute;
+            left: 50%;
+
+            /* 本方案 缺点 是要求子元素 宽度是已知的*/
+            /* margin的 % 赋值 是相对父元素的宽高， 所以不能用margin-left: -50%这样 */
+            margin-left: -100px;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+
+-->
+<div class="parent">
+    <div class="son">
+        position: absolute;
+        left: 50%;
+        margin-left: -50%;
+    </div>
+</div>
+</body>
+</html>
